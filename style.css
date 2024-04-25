@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sedan:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Nunito';
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+.span {
+    color: var(--bg-color);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body{
+    /*background:var(--bg-color);*/
+    background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10 rem 9% 2rem;
+}
+
+.header {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    border: 1px solid black;
+}
+
+.colorb{
+    color: red;
+}
+
+
+.logo {
+    font-size: 2.9rem;
+    color: var(--main-color);
+    font-weight: 700;
+    cursor: default;
+    
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color:blue;
+}
+.navbar a.active {
+    
+    transform: scale(1.1); /* Apply zoom effect on hover */
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center; /* Center-align horizontally */
+    align-items: center; /* Center-align vertically */
+    text-align: left; /* Align text to the left */
+    height: 20px;
+    border: 2px solid black;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content {
+    max-width: 800px; /* Limit the maximum width of the content */
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.home-img {
+    width: 40vw;
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-img img {
+    width: 80%; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    animation: floatImage 4s ease-in-out infinite;
+    position: absolute;
+    top: 25%;
+    right: 5%; 
+    transform: translateY(-50%);
+}
+
+
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5rem); /* Adjust the distance the image floats up */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.home-content p {
+    font-size: 1.3rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .6s ease;
+}
+
+
+.social-media a:hover {
+    /*background: var(--main-color);*/
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color)
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background: black; /* Change the background color to black on hover */
+    box-shadow: none;
+    color: white; /* Change the text color to white on hover */
+}
+
+
+/*about section*/
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /*background:var(--snd-bg-color);*/
+    background: linear-gradient(69.5deg, rgb(251, 0, 0) -0.5%, rgb(3, 10, 252) 97.4%);
+}
+
+
+.about-img img {
+    width: 20vw; /* Adjust the width of the image */
+    border-radius: 8px; /* Set the border radius */
+    border: 5px solid black; /* Add a thick blue border */
+}
+
+.aboutimg{
+    transition: 1.3s ease;
+}
+
+.aboutimg:hover{
+    transform: scale(1.1);
+}
+.heading {
+    text-align: center;
+    font-size: 4.0rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+
+/*portfolio section*/
+
+
+.portfolio{
+    background: radial-gradient(circle at 10% 20%, rgb(151, 10, 130) 0%, rgb(33, 33, 33) 100.2%);
+    border: 2px solid black;
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem var(--bg-color);
+        overflow:hidden;
+        display: flex;
+}
+
+.portfolio-box img {
+    width:100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+
+.portfolio-layer h4{
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--snd-bg-color)
+}
+
+
+
+/*Contact section*/
+.contact{
+    border: 3px solid black;
+    background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
+}
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align:center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100px;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+    
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* CSS for input boxes */
+.input-box {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+/* CSS for hover effect */
+.input-box input[type="text"]:hover,
+.input-box input[type="email"]:hover,
+.input-box textarea:hover {
+    transform: scale(1.08); /* Enlarge the input fields by 5% */
+}
+
+
+
+
+/*footer section*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+   
+    
+}
+
+.footer-text{
+    font-size: 1.9rem;
+}
+
+
+/*breakpoint*/
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+
+    .services {
+        padding: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+
+
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+
+    .home-content{
+        order: 2;
+    }
+
+
+    .home-img img {
+        width:90vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about-img img {
+        width:90vw;
+        margin-top: 4rem;
+    }
+
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-img img {
+        width: 100vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%
+    }
+
+    .contact form .input-box input {
+        width: 100px;
+    }
+}
+
+.span {
+    color: var(--bg-color);
+}
+
+/*Editing Section*/
+
+
+.editing {
+    padding: 4rem 0;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    border: 3px solid black;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.editing-content {
+    display: flex;
+    align-items: center;
+}
+
+.portrait {
+    flex: 1;
+    text-align: center;
+}
+
+.portrait-img {
+    width: 300px; /* Adjust size as needed */
+    height: 400px; /* Set height to match width for a square image */
+    border: 4px solid black; /* Add border with 10px width */
+    border-radius: 10px; /* Remove border radius */
+    transition: transform 0.3s ease;
+}
+
+.portrait-img:hover {
+    transform: scale(1.1); /* Zoom the image by 10% on hover */
+}
+
+
+.editing-skills {
+    flex: 3;
+    padding: 0 2rem;
+}
+
+.editing-skills h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.editing-skills p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.channel-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.transparentbutton {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent; /* Transparent background */
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.transparentbutton:hover {
+    background-color: black; /* Hover color fill with black */
+    color: white; /* Text color on hover */
+}
+
+@media (max-width: 991px) {
+    .editing-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portrait {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+    .editing-skills {
+        text-align: center;
+    }
+    .portrait {
+        order: -1; /* Move the portrait image above the skills content */
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        font-size: 2rem;
+    }
+    .editing-skills h3 {
+        font-size: 2rem;
+    }
+    .editing-skills p {
+        font-size: 1.4rem;
+    }
+    .channel-link {
+        margin-top: 2rem;
+    }
+}
+
+/*whatsapp button*/
+
+.whatsappbutton {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: green; /* Transparent background */
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem black;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.whatsappbutton:hover {
+    background-color: black; /* Hover color fill with black */
+    color: white; /* Text color on hover */
+}
